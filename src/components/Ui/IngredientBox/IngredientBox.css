@@ -1,0 +1,10 @@
+.Form {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+.Danger {
+  background: #e75650;
+  color: #fff;
+  margin-left: 10px;
+}

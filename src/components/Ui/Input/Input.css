@@ -1,0 +1,49 @@
+.Input {
+  -webkit-appearance: none;
+  font-family: inherit;
+  color: #3c4858;
+  border: 1px solid #e0e6ed;
+  border-radius: 4px;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.Label {
+  color: #3c4858;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  font-family: inherit;
+}
+
+.InputElement {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  padding: 6px 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.InputElement:focus {
+  transition: all 0.2s ease-in-out;
+  border-color: #2776ff;
+  color: #1f2d3d;
+  outline: 0;
+}
+.Invalid {
+  border: 1px solid red;
+  background-color: #fda49a;
+}
+.Quantity {
+  width: 35%;
+  margin: 0 10px;
+}
+.Type {
+  width: 45%;
+}

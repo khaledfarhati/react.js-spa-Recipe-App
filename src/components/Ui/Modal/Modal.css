@@ -1,0 +1,21 @@
+.Modal {
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  margin: 20px auto;
+  left: 15%;
+  top: 0%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+@media (min-width: 800px) {
+}

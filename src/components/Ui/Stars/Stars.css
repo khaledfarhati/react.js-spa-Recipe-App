@@ -1,0 +1,17 @@
+.Sr {
+  border: 0 !important;
+  clip: rect(10px, 10px, 10px, 10px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+.Label {
+  /*border-right: 2px solid #ffffff;*/
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}

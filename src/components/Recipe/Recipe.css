@@ -1,0 +1,47 @@
+.Recipe {
+  padding: 1rem;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #e0e6ed;
+}
+.Recipe a {
+  color: inherit;
+  text-decoration: none;
+}
+.Recipe h3 {
+  color: #1f2d3d;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  font-size: 1.1rem;
+}
+.Recipe p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  color: #8492a6;
+  font-size: 1rem;
+}
+.Recipe:hover {
+  background-color: #f9fafc;
+  cursor: pointer;
+}
+
+.RightIcon {
+  float: right;
+  color: rgb(192, 204, 218);
+}
+.IconStar {
+  display: inline-block;
+}
+.TimeCp {
+  display: inline-block;
+  vertical-align: middle;
+}
+.StarsCp {
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
