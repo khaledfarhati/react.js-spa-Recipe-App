@@ -18,11 +18,11 @@
 
 ### Recipes page
 
-![gif_1]("img/recipes.gif")
+![gif_1](img/recipes.gif)
 
-![gif_2]("img/recipes2.gif")
+![gif_2](img/recipes2.gif)
 
-![gif_2]("img/respoRecipes.gif")
+![gif_2](img/respoRecipes.gif)
 
 ### Create Recipe page
 
@@ -32,9 +32,9 @@
 
 ### Edit Recipe
 
-![gif_2]("img/editRecipe.gif")
+![gif_2](img/editRecipe.gif)
 
-![gif_2]("img/dayStars.gif")
+![gif_2](img/dayStars.gif)
 
 ## Development
 
