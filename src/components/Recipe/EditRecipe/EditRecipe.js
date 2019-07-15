@@ -169,8 +169,8 @@ class EditRecipe extends Component {
                     Cancel
                   </button>
                 </div>
-                <hr />
               </div>
+              <hr />
               <div className={classes.Row}>
                 <div
                   className={[classes.RowChild, classes.RecipeEachForm].join(
