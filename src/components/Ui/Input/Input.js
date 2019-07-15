@@ -18,7 +18,6 @@ const input = props => {
   }
   if (props.elementConfig.type === "file") {
     inputClasses.length = 0;
-    console.log(inputClasses);
   }
   switch (props.elementType) {
     case "input":
@@ -69,14 +68,11 @@ const input = props => {
         />
       );
   }
-  console.log(inputElement);
   return (
-    //<div className={classes.Input}>
     <Aux className={classes.Input}>
       <label className={classes.Label}>{props.label}</label>
       {inputElement}
     </Aux>
-    //</div>
   );
 };
 export default input;

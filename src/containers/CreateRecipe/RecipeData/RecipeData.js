@@ -195,7 +195,6 @@ class RecipeData extends Component {
     identifierElement,
     identifierSubElement
   ) => {
-    console.log(event.target.value);
     const ingredientUpdated = { ...this.state.recipeform };
     const updatedElements = {
       ...ingredientUpdated[identifierElement][identifierSubElement]
@@ -216,9 +215,6 @@ class RecipeData extends Component {
         ingredientUpdated[identifierElement][identifierSubElement].valid &&
         formIsValid;
     }
-    console.log(formIsValid);
-    console.log(ingredientUpdated);
-    console.log(updatedElements);
 
     this.setState({ recipeform: ingredientUpdated, formIsValid });
   };
@@ -244,8 +240,7 @@ class RecipeData extends Component {
     const stepsData = Object.keys(this.state.recipeform)
       .filter(key => key.includes("step"))
       .map(key => this.state.recipeform[key]);
-    console.log(ingredientsData);
-    console.log(stepsData);
+
     const formData = {};
     const recipeData = { ...this.state.recipeform };
     const recipeTransformedData = Object.keys(recipeData).reduce(
@@ -282,7 +277,6 @@ class RecipeData extends Component {
     formData["ingredients"] = ingredientArray;
     formData["steps"] = stepArray;
 
-    console.log(formData);
     axios
       .post("/recipes.json", formData)
       .then(response => {
@@ -295,7 +289,6 @@ class RecipeData extends Component {
   onchangeFileHandler = event => {
     if (event.target.files[0]) {
       const file = event.target.files[0];
-      console.log(file.name);
       this.setState({
         uploading: true
       });
@@ -344,15 +337,13 @@ class RecipeData extends Component {
     const ingredientUpdated = Object.keys(this.state.recipeform).filter(key => {
       return this.state.recipeform[key.includes("ingredient")];
     });
-    console.log(ingredientUpdated);
     const ingredientRecipe = Object.keys(this.state.recipeform)
       .filter(key => ingredientKey.includes(key))
       .reduce((obj, key) => {
         obj[key] = this.state.recipeform[key];
         return obj;
       }, {});
-    console.log("ingrkey" + ingredientKey);
-    console.log("ingrrecipe" + ingredientRecipe);
+
     const ingredientArray = [];
 
     for (let key in ingredientRecipe) {
@@ -363,12 +354,10 @@ class RecipeData extends Component {
           config: ingredientRecipe[key][innerKey]
         });
     }
-    console.log(ingredientArray);
     const recipeSteps = Object.keys(this.state.recipeform).filter(key => {
       return key.includes("steps");
     });
 
-    console.log(recipeSteps.length);
     const stepsArray = [];
 
     for (let i = 0; i < recipeSteps.length; i++) {

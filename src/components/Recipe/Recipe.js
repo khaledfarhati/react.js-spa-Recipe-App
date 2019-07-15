@@ -4,7 +4,7 @@ import { faClock, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const recipe = props => {
   const { details, index } = props;
-  console.log(index);
+
   const starsArray = Array.from({ length: 5 }, (v, i) => 1 * 1).fill(
     0,
     details.stars,
@@ -42,6 +42,7 @@ const recipe = props => {
           <div className={classes.StarsCp}>
             {starsArray.map((v, i) => (
               <FontAwesomeIcon
+                key={i}
                 icon={faStar}
                 className={"fa-1x"}
                 style={

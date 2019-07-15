@@ -93,6 +93,9 @@
 .Form button {
   margin-left: 10px;
 }
+.Form textarea {
+  margin-bottom: 15px;
+}
 .Btn {
   -webkit-appearance: none;
   border-radius: 999px;

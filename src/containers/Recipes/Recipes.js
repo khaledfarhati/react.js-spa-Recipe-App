@@ -21,6 +21,7 @@ class Recipes extends Component {
     loading: false,
     recipekey: null,
     recipename: "",
+    editRecipe: false,
     options: [
       { value: "meat", displayValue: "Meat" },
       { value: "baking", displayValue: "Baking" },
@@ -88,7 +89,19 @@ class Recipes extends Component {
   saveStateToLocalstorage() {
     localStorage.setItem("recipes", JSON.stringify(this.state.recipes));
   }
-
+  editRecipeHandler = () => {
+    this.setState({ editRecipe: true });
+  };
+  clearInputHandler = (rcpkey, elm) => {
+    const recipes = { ...this.state.recipes };
+    recipes[rcpkey][elm] = "";
+    this.setState({ recipes });
+  };
+  handleRemoveElement = (rcpkey, elm, key) => {
+    const recipes = { ...this.state.recipes };
+    recipes[rcpkey][elm].splice(key, 1);
+    this.setState({ recipes });
+  };
   render() {
     let editrecipe = null;
     editrecipe = (
@@ -98,6 +111,11 @@ class Recipes extends Component {
         recipekey={this.state.recipekey}
         options={this.state.options}
         recipename={this.state.recipename}
+        editRecipeHandler={this.editRecipeHandler}
+        editRecipe={this.state.editRecipe}
+        modalClosed={this.editingCancelHandler}
+        handleRemoveElement={this.handleRemoveElement}
+        clearInputHandler={this.clearInputHandler}
       />
     );
 

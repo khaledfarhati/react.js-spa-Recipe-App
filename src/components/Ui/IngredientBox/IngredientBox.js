@@ -51,6 +51,7 @@ class IngredientBox extends Component {
           style={{ color: "#3c4858", marginLeft: "10px" }}
           size="1x"
           onClick={() => this.props.removeIngredient(index)}
+        
         />
       </div>
     );
